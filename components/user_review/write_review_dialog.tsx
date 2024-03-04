@@ -19,7 +19,7 @@ export default function WriteReview() {
   };
   return (
     <Dialog>
-      <DialogTrigger className="w-full border rounded-full py-3 flex items-center justify-center gap-2 text-white text-sm ">
+      <DialogTrigger className="w-full border-[2px] border-gray-500/80 hover:bg-gray-500/60 duration-200 transition-all ease-linear rounded-full py-2.5 flex items-center justify-center gap-2 text-white text-sm ">
         <Pencil size={14} />
         Write a review
       </DialogTrigger>
@@ -31,6 +31,8 @@ export default function WriteReview() {
           </DialogDescription>
         </DialogHeader>
         <div className="w-full space-y-3">
+          {/* make one component for user input  */}
+
           <div className="w-full bg-[#27272a] py-2 px-2 rounded-[10px] hover:bg-[#444447] transition-colors ease-in-out duration-200">
             <label className="text-xs">Name</label>
             <div className="flex w-full gap-1 items-center">

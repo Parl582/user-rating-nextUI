@@ -42,10 +42,9 @@ export function ComboboxDemo() {
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button
-          variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[150px] rounded-full justify-between"
+          className="w-[150px] text-sm font-light rounded-full justify-between border-2 text-gray-400 border-gray-400/70 hover:border-2 hover:border-white "
         >
           {value
             ? frameworks.find((framework) => framework.value === value)?.label
@@ -58,12 +57,12 @@ export function ComboboxDemo() {
           />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[150px] border-0 p-0 text-white rounded-[15px] bg-[#18181b]">
+      <PopoverContent className="w-[150px] border-0 p-0 text-[#dad9d8] text-sm  rounded-[15px] bg-[#18181b]">
         <Command>
           <CommandGroup>
             {frameworks.map((framework) => (
               <CommandItem
-                className="cursor-pointer"
+                className="cursor-pointer text-sm"
                 key={framework.value}
                 value={framework.value}
                 onSelect={(currentValue) => {

@@ -20,14 +20,15 @@ export default function UserReview() {
         {/* rating search  */}
 
         <label
-          htmlFor="input"
-          className="w-full  rounded-full py-1.5 px-3 flex gap-2 my-4 items-center text-white border f focus:ring-1"
+          className="w-full  rounded-full py-1.5 px-3 flex gap-2 my-4 items-center text-white
+
+border-2 border-gray-400/70 hover:border-2 hover:border-white transition-all duration-200 ease-in
+        "
         >
           <Search color="#fff" size={18} />
 
           <input
             type="text"
-            id="input"
             className="flex-1 bg-inherit outline-none "
             placeholder="Search reviews"
           />
