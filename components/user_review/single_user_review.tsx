@@ -5,12 +5,15 @@ import Rating from "./rating";
 export default function SingleUserReview({
   rating,
   name,
-  image
+  image,
 }: {
   rating: number;
   name: string;
   image?: string;
 }) {
+  const handleRating = async () => {
+    "use server";
+  };
   return (
     <div className="text-white w-full space-y-2 pt-4">
       <div className="flex items-center justify-between">
@@ -32,7 +35,7 @@ export default function SingleUserReview({
         {/* star  */}
 
         <div className="flex space-x-1">
-          <Rating rating={rating.toString()} />
+          <Rating rating={rating.toString()} handleRating={handleRating} />
         </div>
       </div>
 

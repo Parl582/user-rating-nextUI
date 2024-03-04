@@ -1,5 +1,6 @@
 import { Pencil, Star } from "lucide-react";
 import React from "react";
+import WriteReview from "./write_review_dialog";
 
 const reviewData = [
   {
@@ -37,11 +38,9 @@ export default function ReviewMainCard() {
       {reviewData.map((review) => (
         <Bar key={review.title} {...review} />
       ))}
+      {/* write review dialog button  */}
       <div className="py-3">
-        <button className="w-full border rounded-full py-3 flex items-center justify-center gap-2 text-white text-sm ">
-          <Pencil size={14} />
-          Write a review
-        </button>
+        <WriteReview />
       </div>
       <h3 className="text-[#9797a0] text-sm text-center">
         Share your experience with this product
