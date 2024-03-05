@@ -1,3 +1,4 @@
+"use client";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Aperture,
@@ -15,7 +16,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-import React from "react";
+import React, { Suspense } from "react";
 import { SidebarMenu } from "./sidebar_menu";
 
 export default function Sidebar() {
@@ -51,7 +52,9 @@ export default function Sidebar() {
         </div>
         <div className="py-6 space-y-1">
           {menu.map((tabs) => (
-            <SidebarMenu key={tabs.tabName} {...tabs} />
+            <Suspense key={tabs.tabName}>
+              <SidebarMenu {...tabs} />
+            </Suspense>
           ))}
         </div>
       </div>
@@ -60,7 +63,9 @@ export default function Sidebar() {
 
       <div className="">
         {profileMenu.map((tabs) => (
-          <SidebarMenu key={tabs.tabName} {...tabs} />
+          <Suspense key={tabs.tabName}>
+            <SidebarMenu {...tabs} />
+          </Suspense>
         ))}
       </div>
     </div>
