@@ -8,8 +8,8 @@ export default function page() {
     <div className="flex justify-between w-full">
       <Sidebar />
       <div className="flex-1  h-screen overflow-y-auto">
-        {/* <DashboardHeader />
-        <DashboardContainer /> */}
+        {/* <DashboardHeader /> */}
+        <DashboardContainer />
       </div>
     </div>
   );
